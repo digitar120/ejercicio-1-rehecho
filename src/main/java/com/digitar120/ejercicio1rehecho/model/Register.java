@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 public class Register {
        private @Id @GeneratedValue @Column(name = "REGISTER_ID") Integer id;
        private @Column (name = "REGISTER_TEXT") String text;
-       private @ManyToOne @Column(name = "PERSON_ID") Person person;
+       private @ManyToOne @JoinColumn(name = "PERSON_ID") Person person;
 
     public Register(Integer id, String text, Person person) {
         this.id = id;
