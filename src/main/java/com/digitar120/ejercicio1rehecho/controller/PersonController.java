@@ -25,7 +25,7 @@ public class PersonController {
     }
 
     // GET para persona con Id específico
-    @GetMapping("/persons/{id]")
+    @GetMapping("/persons/{id}")
     Person one(@PathVariable Integer id){
         return repo.findById(id).orElseThrow( () -> new PersonNotFoundException(id));
     }
