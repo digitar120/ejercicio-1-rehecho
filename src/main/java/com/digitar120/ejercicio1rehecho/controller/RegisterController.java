@@ -34,8 +34,8 @@ public class RegisterController {
 
     // GET para todos los registros asociados a una persona
     @GetMapping("/registers/by-person-id/{person_id}")
-    List<Register> all(@PathVariable Integer id){
-        return repository.findByPersonId(id);
+    List<Register> all(@PathVariable Integer person_id){
+        return repository.findByPersonId(person_id);
     }
 
 
