@@ -47,7 +47,7 @@ public class BranchController {
         return repo.findById(branch_id)
                 .map( branch -> {
                     branch.setName(new_branch.getName());
-                    repo.save(branch;
+                    return repo.save(branch);
                 })
                 .orElseThrow( () -> new BranchNotFoundException(branch_id));
     }
