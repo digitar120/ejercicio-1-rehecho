@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 public class Register {
-       private @Id @GeneratedValue @Column(name = "REGISTER_ID") Integer id;
+       private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Column(name = "REGISTER_ID") Integer id;
        private @Column (name = "REGISTER_TEXT") String text;
        private @ManyToOne @JoinColumn(name = "PERSON_ID") Person person;
 

@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 public class Person {
-    private @Id @GeneratedValue @Column(name = "PERSON_ID") Integer id;
+    private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Column(name = "PERSON_ID") Integer id;
     private @Column(name = "PERSON_NAME") String name;
     private @ManyToOne @JoinColumn(name="BRANCH_ID") Branch branch;
 

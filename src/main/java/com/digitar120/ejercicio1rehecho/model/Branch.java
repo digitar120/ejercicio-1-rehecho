@@ -1,14 +1,11 @@
 package com.digitar120.ejercicio1rehecho.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Branch {
 
-    private @Id @GeneratedValue @Column(name = "BRANCH_ID") Integer id;
+    private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Column(name = "BRANCH_ID") Integer id;
     private @Column(name = "BRANCH_NAME") String name;
 
     public Branch(Integer id, String name) {
